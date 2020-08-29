@@ -1,0 +1,11 @@
+@import '../../style/variables';
+@import '../../style/minixs';
+
+.navbar{
+    padding: 10px 20px;
+    background-color: rgb(50,50,50);
+    transition: padding 0.2s ease;
+    @include respond(phone) {
+        padding: 20px 20px;
+    }
+}

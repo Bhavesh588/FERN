@@ -1,0 +1,62 @@
+@import '../../style/variables';
+@import '../../style/minixs';
+
+.line {
+    background-color: rgba(50,50,50, 0.2);
+    height: 1px;
+}
+
+.viewbox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+
+    .totalview, .todayview, .liveview, .monthlyview {
+        width: 200px;
+        height: 100%;
+    }
+}
+@media (max-width:650px) {
+    .viewbox {
+        display: inline-block;
+        height: auto;
+    }
+}
+
+#Chart3 {
+    height: 300px;
+}
+
+.scroll {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+
+.tog {
+    font-size: 18px;
+}
+
+.chart .nav {
+    flex-direction: column;
+    width: 50%;
+
+    a {
+        color: rgb(50,50,50);
+    }
+
+    .nav-link.active {
+        color: white;
+    }
+}
+
+.chart .row .col-md-4, .col-md-8 {
+    padding: 0;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: left;
+}

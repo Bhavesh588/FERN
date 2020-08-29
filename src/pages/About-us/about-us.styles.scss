@@ -1,0 +1,41 @@
+.aboutus {
+    min-height: 100vh;
+    padding: 50px 20px;
+
+    
+    .about {
+        min-height: 94vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        border: 1px solid gray;
+        color: white;
+
+        .linehr {
+            background-color: white;
+            margin-top: 0;
+            margin-left: 0;
+            height: 1px;
+            width: 50px;
+        }
+
+        .aboutimage {
+            // background-color: gray;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .imgabout {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .det {
+            text-align: left;
+        }
+    }
+}

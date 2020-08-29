@@ -1,0 +1,40 @@
+.line {
+    background-color: rgba(50,50,50, 0.2);
+    height: 1px;
+}
+
+.viewbox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+
+    .totalview {
+        width: 200px;
+        height: 100%;
+    }
+
+    .todayview {
+        width: 200px;
+        height: 100%;
+    }
+
+    .liveview {
+        width: 200px;
+        height: 100%;
+    }
+
+}
+@media (max-width:650px) {
+    .viewbox {
+        display: inline-block;
+        height: auto;
+    }
+}
+
+.scroll {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}

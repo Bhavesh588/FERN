@@ -1,0 +1,50 @@
+.admin {
+    min-height: 100vh;
+    background-color: white;
+}
+
+@import '../../style/variables';
+@import '../../style/minixs';
+
+.navbar{
+    padding: 10px 20px;
+    background-color: rgb(50,50,50);
+    transition: padding 0.2s ease;
+    justify-content: left;
+    @include respond(tab-port-sm) {
+        .navbar-brand {
+            margin: auto;
+        }
+    }
+}
+
+.nav-link:hover {
+    background-color: rgba(100,100,100, 0.2);
+    transition: 0.2s;
+}
+
+.nav-link.active {
+    background-color: rgb(80,80,80);
+    transition: 0.2s;
+}
+
+.side .nav {
+    flex-direction: column;
+    width: 200px;
+
+    a {
+        color: white;
+    }
+}
+
+.tab-pane.active {
+    background-color: white;
+}
+
+.darktheme {
+    color: white;
+}
+
+#dashboard, #orders {
+    min-height: 93.5vh;
+}

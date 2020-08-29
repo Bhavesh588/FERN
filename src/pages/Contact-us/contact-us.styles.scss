@@ -1,0 +1,26 @@
+@import '../../style/minixs';
+
+.contactus {
+    min-height: 100vh;
+    background-color: rgb(50,50,50);
+    padding: 50px 20px;
+
+    .conbox {
+        min-height: 94vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        border: 1px solid gray;
+        color: white;
+
+        .formbox {
+            width: 50%;
+            @include respond(tab-port) {
+                width: 95%;
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,33 @@
+@import '../../style/minixs';
+
+.certificate {
+    padding: 50px 20px;
+    background-color: rgb(50,50,50);
+    color: white;
+
+    .cerbox {
+        border-radius: 20px;
+        border: 1px solid gray;
+    }
+
+    .outlinecer {
+        // background-color: gray;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        justify-content: center;
+        .imgser {
+            width: auto;
+            height: 250px;
+            @include respond(phone) {
+                width: 200px;
+                height: auto;
+            }
+        }
+
+    }
+
+    .row {
+        margin: 0;
+    }
+}

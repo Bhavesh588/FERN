@@ -1,0 +1,49 @@
+@import '../../style/variables';
+@import '../../style/minixs';
+
+.product{
+    min-height: 100vh;
+    padding: 50px 20px;
+
+    .pro {
+        min-height: 94vh;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        border: 1px solid gray;
+        color: white;
+
+        
+        #demo {
+            padding: 100px 0px;
+            width: 100%;
+
+            .proimage {
+                background-color: gray;
+                width: 250px;
+                height: 250px;
+                border-radius: 20px;
+                margin: auto;
+                justify-content: center;
+                overflow: hidden;
+            }
+
+            .protitle {
+                padding: 10px 0px;
+                font-size: 2rem;
+            }
+
+            .des {
+                text-align: start;
+                padding: 20px 25%;
+                .tit {
+                    font-size: 1.2rem;
+                }
+                @include respond(tab-port) {
+                    padding: 20px 5%;
+                }
+            }
+        }
+    }
+
+}
