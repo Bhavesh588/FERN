@@ -8,8 +8,7 @@ import Charts from '../Charts/charts.component';
 import Orders from '../Orders/orders.component';
 import Website from '../Settings/website.component';
 
-import { getAllUser } from '../../firebase/firebase.utiles';
-import { getadmin, insertDates } from '../../firebase/firebase.admin'
+import { getAllUser, getadmin, insertDates } from '../../firebase/firebase.utiles';
 
 import './admin.styles.scss';
 

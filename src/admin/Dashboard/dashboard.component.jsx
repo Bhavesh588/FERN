@@ -4,8 +4,7 @@ import React from 'react';
 
 import './dashboard.styles.scss';
 
-import { insertorderacc, insertordercan } from '../../firebase/firebase.admin'
-import { deleteuser } from '../../firebase/firebase.utiles'
+import { deleteuser, insertorderacc, insertordercan } from '../../firebase/firebase.utiles'
 
 const Dashboard = ({ user, admin }) => {
 

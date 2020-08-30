@@ -10,7 +10,7 @@ import Certificate from '../Certificate/certificate.component';
 import Team from '../Team/team.component';
 import Contactus from '../Contact-us/contact-us.component';
 
-import { getadmin } from '../../firebase/firebase.admin'
+import { getadmin } from '../../firebase/firebase.utiles'
 
 import './home.styles.scss';
 import 'aos/dist/aos.css'

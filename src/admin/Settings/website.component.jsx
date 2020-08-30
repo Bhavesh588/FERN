@@ -4,7 +4,7 @@ import { ReactSortable } from 'react-sortablejs';
 
 import './website.styles.scss';
 import { insertHome, storage, getadmin, changeDark, changeArrange, 
-    insertProduct, insertService, insertAboutus, insertCertificate, insertTeam } from '../../firebase/firebase.admin';
+    insertProduct, insertService, insertAboutus, insertCertificate, insertTeam } from '../../firebase/firebase.utiles';
 
 class Website extends Component {
 

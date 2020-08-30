@@ -3,8 +3,7 @@ import React from 'react';
 
 import './orders.styles.scss';
 
-import { insertorderacc, insertordercan, insertorderdon } from '../../firebase/firebase.admin'
-import { deleteuser } from '../../firebase/firebase.utiles'
+import { deleteuser, insertorderacc, insertordercan, insertorderdon } from '../../firebase/firebase.utiles'
 
 const Orders = ({ user, admin }) => {
     

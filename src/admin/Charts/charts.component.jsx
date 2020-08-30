@@ -3,8 +3,7 @@ import Chart from 'chart.js';
 import $ from 'jquery';
 // import Switch from 'react-switch';
 
-import { getadmin } from '../../firebase/firebase.admin'
-import { getAllUser } from '../../firebase/firebase.utiles'
+import { getAllUser, getadmin } from '../../firebase/firebase.utiles'
 
 import './charts.styles.scss';
 
