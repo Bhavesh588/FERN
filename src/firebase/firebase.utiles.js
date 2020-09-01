@@ -156,13 +156,11 @@ export const insertDates = async () => {
                         date = [d.getDate()]
                         month[d.getMonth()] = date
                         Dates[d.getFullYear()] = month
-                        console.log(Dates)
                         console.log('you have inserted a Year')
                     } else if(!Object.keys(month).includes(String(d.getMonth()))) {
                         date = [d.getDate()]
                         month[d.getMonth()] = date
                         Dates[d.getFullYear()] = month
-                        console.log(Dates)
                         console.log('you have inserted a Month')
                     } else if(!date.includes(d.getDate())) {
                         date.push(d.getDate())
@@ -182,6 +180,12 @@ export const insertDates = async () => {
                     acc = doc.data().accepted
                     monthacc = doc.data().accepted[d.getFullYear()]
                     dateacc = doc.data().accepted[d.getFullYear()][d.getMonth()]
+                    if(dateacc === undefined) {
+                        dateacc = {}
+                    } else if(monthacc === undefined) {
+                        dateacc = {}
+                        monthacc = {}
+                    }
 
                     if(!Object.keys(acc).includes(String(d.getFullYear()))) {
                         dateacc[d.getDate()] = 0
@@ -210,6 +214,12 @@ export const insertDates = async () => {
                     can = doc.data().cancelled
                     monthacc = doc.data().cancelled[d.getFullYear()]
                     dateacc = doc.data().cancelled[d.getFullYear()][d.getMonth()]
+                    if(dateacc === undefined) {
+                        dateacc = {}
+                    } else if(monthacc === undefined) {
+                        dateacc = {}
+                        monthacc = {}
+                    }
 
                     if(!Object.keys(can).includes(String(d.getFullYear()))) {
                         dateacc[d.getDate()] = 0
@@ -238,6 +248,12 @@ export const insertDates = async () => {
                     don = doc.data().doned
                     monthacc = doc.data().doned[d.getFullYear()]
                     dateacc = doc.data().doned[d.getFullYear()][d.getMonth()]
+                    if(dateacc === undefined) {
+                        dateacc = {}
+                    } else if(monthacc === undefined) {
+                        dateacc = {}
+                        monthacc = {}
+                    }
 
                     if(!Object.keys(don).includes(String(d.getFullYear()))) {
                         dateacc[d.getDate()] = 0
@@ -266,6 +282,12 @@ export const insertDates = async () => {
                     use = doc.data().users
                     monthacc = doc.data().users[d.getFullYear()]
                     dateacc = doc.data().users[d.getFullYear()][d.getMonth()]
+                    if(dateacc === undefined) {
+                        dateacc = {}
+                    } else if(monthacc === undefined) {
+                        dateacc = {}
+                        monthacc = {}
+                    }
 
                     if(!Object.keys(use).includes(String(d.getFullYear()))) {
                         dateacc[d.getDate()] = 0
