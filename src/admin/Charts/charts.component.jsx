@@ -77,7 +77,7 @@ class Charts extends Component {
         let graphdates = []
         let done = []
         let ut = 0
-        let at = 0
+        // let at = 0
         let ct = 0
         let dt = 0
         let year
@@ -87,42 +87,39 @@ class Charts extends Component {
         
         const { admin } = this.state
         if(admin.length >= 1) {
-            let accepted = admin[9]
+            // let accepted = admin[9]
             let cancelled = admin[10]
             let doned = admin[11]
             let users = admin[15]
-            totaltoday = accepted[d.getFullYear()][d.getMonth()][d.getUTCDate()] + cancelled[d.getFullYear()][d.getMonth()][d.getUTCDate()]
-             + doned[d.getFullYear()][d.getMonth()][d.getUTCDate()] + users[d.getFullYear()][d.getMonth()][d.getUTCDate()]
+            totaltoday = users[d.getFullYear()][d.getMonth()][d.getUTCDate()]
 
-            year = accepted
+            year = users
             year = Object.keys(year)
-            for(let ac in accepted) {
-                for(let mo in accepted[ac]) {
-                    for(let da in accepted[ac][mo]) {
-                        at = at + accepted[ac][mo][da]
+            for(let ac in users) {
+                for(let mo in users[ac]) {
+                    for(let da in users[ac][mo]) {
                         ct = ct + cancelled[ac][mo][da]
                         dt = dt + doned[ac][mo][da]
                         ut = ut + users[ac][mo][da]
                     }
                 }
             }
-            total = at + ct + dt + ut
+            total = ut
 
             // Graph Display 
 
             let monthtotal = admin[9][d.getFullYear()][d.getMonth()]
             totalmonth = 0
             for(let mon in monthtotal) {
-                totalmonth = totalmonth + accepted[d.getFullYear()][d.getMonth()][mon] + cancelled[d.getFullYear()][d.getMonth()][mon]
-                + doned[d.getFullYear()][d.getMonth()][mon] + users[d.getFullYear()][d.getMonth()][mon]
-                done.push(accepted[d.getFullYear()][d.getMonth()][mon])
+                totalmonth = totalmonth + users[d.getFullYear()][d.getMonth()][mon]
+                done.push(doned[d.getFullYear()][d.getMonth()][mon])
             }
-            let graph = Object.keys(accepted[d.getFullYear()][d.getMonth()])
+            let graph = Object.keys(doned[d.getFullYear()][d.getMonth()])
             let monthname = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
             graph.map(g => 
                 graphdates.push(g + ' ' + monthname[this.state.monthnumber])
             )
-            notpresent = Object.keys(accepted[d.getFullYear()]).includes(String(this.state.monthnumber))
+            notpresent = Object.keys(doned[d.getFullYear()]).includes(String(this.state.monthnumber))
 
             // console.log(this.state.monthnumber)
             // console.log(admin[9][this.state.years][this.state.monthnumber])

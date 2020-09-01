@@ -13,6 +13,8 @@ const config = {
     appId: "1:786928641094:web:5bcb6d50f01e8c7336d647"
 };
 
+var d = new Date()
+
 export const createuser = async (user) => {
     const userRef = firestore.doc(`users/${user.fname}`)
     const snapshot = await userRef.get()
@@ -42,6 +44,36 @@ export const getAllUser = async () => {
         snapshot.docs.map(doc => record.push(doc.data()))
     })
     return record
+}
+
+export const increaseuser = async () => {
+    let users = {}
+    let month = {}
+    let date = {}
+
+    const adminRef = firestore.collection('admin')
+    await adminRef.get()
+    .then(snapshot => {
+        snapshot.docs.map((doc,i) => {
+            if(i === 15) {
+                users = doc.data().users
+                month = doc.data().users[d.getFullYear()]
+                date = doc.data().users[d.getFullYear()][d.getMonth()]
+
+                let num = doc.data().users[d.getFullYear()][d.getMonth()][d.getDate()]
+                num = num + 1
+                date[d.getDate()] = num
+                month[d.getMonth()] = date
+                users[d.getFullYear()] = month
+            }
+            return 0
+        })
+    })
+
+    const adminRefinsertu = firestore.doc('admin/users')
+    await adminRefinsertu.set({
+        "users": users
+    })
 }
 
 export const updateuser = async (id,number) => {
@@ -127,8 +159,6 @@ export const getadmin = async () => {
 
     return admin
 }
-
-var d = new Date()
 
 export const insertDates = async () => {
     const adminRef = firestore.collection('admin')

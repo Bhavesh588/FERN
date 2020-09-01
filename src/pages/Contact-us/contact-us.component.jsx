@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import './contact-us.styles.scss';
 
 import FormInput from '../../components/form-input/form-input.component';
-import { createuser } from '../../firebase/firebase.utiles';
+import { createuser, increaseuser } from '../../firebase/firebase.utiles';
 
 class Contactus extends Component {
     constructor(props) {
@@ -37,6 +37,7 @@ class Contactus extends Component {
         }
         
         createuser(user)
+        increaseuser()
 
 		this.setState({
 			fname: '',
