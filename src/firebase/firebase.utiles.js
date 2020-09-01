@@ -4,14 +4,13 @@ import 'firebase/storage'
 import 'firebase/auth';
 
 const config = {
-    apiKey: "AIzaSyBIM2wxfyuGAeJzdCSuh8FbLphlivUbgOM",
-    authDomain: "agriculture-d64a9.firebaseapp.com",
-    databaseURL: "https://agriculture-d64a9.firebaseio.com",
-    projectId: "agriculture-d64a9",
-    storageBucket: "agriculture-d64a9.appspot.com",
-    messagingSenderId: "520877436094",
-    appId: "1:520877436094:web:579b8c08150468e32642ef",
-    measurementId: "G-1LLQ83EEGG"
+    apiKey: "AIzaSyCiDBSWxwy7Z3N7r-cCO3SiZZiaPIqDe2E",
+    authDomain: "agriculture-535b6.firebaseapp.com",
+    databaseURL: "https://agriculture-535b6.firebaseio.com",
+    projectId: "agriculture-535b6",
+    storageBucket: "agriculture-535b6.appspot.com",
+    messagingSenderId: "786928641094",
+    appId: "1:786928641094:web:5bcb6d50f01e8c7336d647"
 };
 
 export const createuser = async (user) => {
